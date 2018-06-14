@@ -85,13 +85,14 @@ $breakPoint: 420px;
 
     .badge {
       vertical-align: text-bottom;
+      font-weight: normal;
     }
   }
 
   &--win {
     $winColor: #ED4242;
-    border-color: $winColor;
-    background-color: $winColor;
+    border-color: $winColor!important;
+    background-color: $winColor!important;
   }
 }
 
@@ -171,6 +172,13 @@ $breakPoint: 420px;
 
   &__table {
     margin-top: 8px;
+
+    &--done {
+      .member {
+        border-color: #CCC;
+        background-color: #CCC;
+      }
+    }
 
     th {
       text-align: center;

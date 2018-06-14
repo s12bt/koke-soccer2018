@@ -58,22 +58,32 @@
             <span>vs</span>
             {{game.teamB}} {{game.teamBFlag}}
           </span>
-          <div class="game__result" v-if="game.teamAResult && game.teamBResult"  v-cloak>
+          <div class="game__result" v-cloak v-if="game.teamAResult && !(game.teamAResult === 0)">
             {{game.teamAResult}} - {{game.teamBResult}}
           </div>
         </h2>
       </div>
       <div class="container">
         <div class="game__tvInfo"  v-cloak><i class="fal fa-tv-retro"></i> {{game.tv}}</div>
-        <table class="table game__table">
+        <table class="table game__table"
+               v-bind:class="{ 'game__table--done': game.status == 'done' }"
+        >
           <thead>
           <tr>
-            <th colspan="3">ピタリ賞 <span class="game__point"  v-cloak>{{game.point.pitari}}kp</span></th>
+            <th colspan="3">
+              ピタリ賞 <span class="game__point"  v-cloak>{{game.point.pitari}}kp</span>
+            </th>
           </tr>
           <tr>
-            <th  v-cloak>{{game.teamA}}<br /><span class="game__point">{{game.point.teamA}}kp</span></th>
-            <th  v-cloak>引き分け<br /><span class="game__point">{{game.point.draw}}kp</span></th>
-            <th  v-cloak>{{game.teamB}}<br /><span class="game__point">{{game.point.teamB}}kp</span></th>
+            <th v-cloak>
+              {{game.teamA}}<br /><span class="game__point">{{game.point.teamA}}kp</span>
+            </th>
+            <th v-cloak>
+              引き分け<br /><span class="game__point">{{game.point.draw}}kp</span>
+            </th>
+            <th v-cloak>
+              {{game.teamB}}<br /><span class="game__point">{{game.point.teamB}}kp</span>
+            </th>
           </tr>
           </thead>
           <tbody>
