@@ -2,52 +2,52 @@ var members = {
   watamura: {
     name: '綿村',
     image: './src/m-watamura.jpg',
-    point: 0
+    point: 312
   },
   fujino : {
     name: '藤野',
     image: './src/m-fujino.jpg',
-    point: 0
+    point: 312
   },
   oguro: {
     name: '小黒',
     image: './src/m-oguro.jpg',
-    point: 0
+    point: 312
   },
   mogi :{
     name: '茂木',
     image: './src/m-mogi.jpg',
-    point: 0
+    point: 312
   },
   usami: {
     name: '宇佐美',
     image: './src/m-usami.jpg',
-    point: 0
+    point: 312
   },
   atsumi: {
     name: 'あつみん',
     image: './src/m-atsumi.jpg',
-    point: 0
+    point: 312
   },
   kenta : {
     name: '研太',
     image: './src/m-kenta.jpg',
-    point: 0
+    point: 312
   },
   yamako : {
     name: 'やまこ',
     image: './src/m-yamako.jpg',
-    point: 0
+    point: 312
   },
   kani: {
     name: '🦀',
     image: './src/m-kani.jpg',
-    point: 0
+    point: 312
   },
   deek: {
     name: 'デレック',
     image: './src/m-deek.jpg',
-    point: 0
+    point: 312
   },
   hamada: {
     name: 'はまだ',
@@ -55,19 +55,19 @@ var members = {
     point: 0
   },
   ikehata: {
-    image: './src/m-ikehata.jpg',
     name: 'いけはた',
+    image: './src/m-ikehata.jpg',
     point: 0
   },
   yoshida: {
     name: '吉田',
     image: './src/m-yoshida.jpg',
-    point: 0
+    point: 312
   },
   komada :{
     name: '駒田',
     image: './src/m-komada.jpg',
-    point: 0
+    point: 312
   },
   yuki : {
     name:'ゆき',
@@ -179,8 +179,8 @@ var games = [
     teamB: 'サウジアラビア',
     teamBFlag: '🇸🇦',
     tv: 'NHK／NHK BS1',
-    teamAResult: null,
-    teamBResult: null,
+    teamAResult: 5,
+    teamBResult: 0,
     point: pointInfo.game1,
     votes: voteInfo.game1
   },
