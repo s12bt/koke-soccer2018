@@ -29,6 +29,7 @@
           <li>1試合ごとにスコアまでぴったり当てた人が勝者。各戦ごとにBETされたポイント勝者総取り</li>
           <li>正解が複数人いた場合にはBETされたポイントを勝者で分割</li>
           <li>もし勝者がいなければ、BETされたポイント半分はジャックポットとして次回に持ち越し。もう半分は勝敗を当てた人に分配</li>
+          <li>10試合終わって、1番ポイントが高い人が優勝</li>
         </ul>
       </div>
 
@@ -90,9 +91,14 @@
       <span class="member__content">吉田 <span class="badge badge-dark">0kp</span></span>
     </div>
     <div class="member">
+      <img class="member__image" src="./src/m-komada.jpg" alt="駒田" />
+      <span class="member__content">駒田 <span class="badge badge-dark">0kp</span></span>
+    </div>
+    <div class="member">
       <img class="member__image" src="./src/m-yuki.jpg" alt="ゆき" />
       <span class="member__content">ゆき <span class="badge badge-dark">0kp</span></span>
     </div>
+
     
     <!-- member template
 
@@ -148,6 +154,10 @@
                 <img class="member__image" src="./src/m-yoshida.jpg" alt="吉田" />
                 <span class="member__content">0 - 0</span>
               </div>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="駒田">
+                <img class="member__image" src="./src/m-komada.jpg" alt="駒田" />
+                <span class="member__content">0 - 0</span>
+              </div>
               <div class="member" data-toggle="tooltip" data-placement="left" title="ゆき">
                 <img class="member__image" src="./src/m-yuki.jpg" alt="ゆき" />
                 <span class="member__content">0 - 0</span>
@@ -159,8 +169,9 @@
   <div class="game">
     <div class="game__titleContainer game__titleContainer--next">
       <h2>
-      <span class="game__date">18/6/14 Thu. 24:00</span>
-      <span class="game__title">🇷🇺ロシア VS サウジアラビア🇸🇦</span>
+        <span class="game__count">No.1</span>
+        <span class="game__date">18/6/14 Thu. 24:00</span>
+        <span class="game__title">🇷🇺ロシア VS サウジアラビア🇸🇦</span>
       </h2>
     </div>
     <div class="container">
@@ -173,74 +184,82 @@
       <table class="table game__table">
         <thead>
         <tr>
-          <th>ロシア</th>
-          <th>引き分け</th>
-          <th>サウジアラビア</th>
+          <th colspan="3">ピタリ賞: 7500kp</th>
+        </tr>
+        <tr>
+          <th>ロシア (312kp)</th>
+          <th>引き分け (1875kp)</th>
+          <th>サウジアラビア (3750kp)</th>
         </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-            </td>
-            <td>
               <div class="member" data-toggle="tooltip" data-placement="left" title="綿村">
                 <img class="member__image" src="./src/m-watamura.jpg" alt="綿村" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="藤野">
-                <img class="member__image" src="./src/m-fujino.jpg" alt="藤野" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="小黒">
-                <img class="member__image" src="./src/m-oguro.jpg" alt="小黒" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="茂木">
-                <img class="member__image" src="./src/m-mogi.jpg" alt="茂木" />
-                <span class="member__content">0 - 0</span>
+                <span class="member__content">3 - 1</span>
               </div>
               <div class="member" data-toggle="tooltip" data-placement="left" title="宇佐美">
                 <img class="member__image" src="./src/m-usami.jpg" alt="宇佐美" />
-                <span class="member__content">0 - 0</span>
+                <span class="member__content">3 - 0</span>
+              </div>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="茂木">
+                <img class="member__image" src="./src/m-mogi.jpg" alt="茂木" />
+                <span class="member__content">2 - 1</span>
               </div>
               <div class="member" data-toggle="tooltip" data-placement="left" title="あつみん">
                 <img class="member__image" src="./src/m-atsumi.jpg" alt="あつみん" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="研太">
-                <img class="member__image" src="./src/m-kenta.jpg" alt="研太" />
-                <span class="member__content">0 - 0</span>
+                <span class="member__content">2 - 1</span>
               </div>
               <div class="member" data-toggle="tooltip" data-placement="left" title="やまこ">
                 <img class="member__image" src="./src/m-yamako.jpg" alt="やまこ" />
-                <span class="member__content">0 - 0</span>
+                <span class="member__content">2 - 1</span>
               </div>
               <div class="member" data-toggle="tooltip" data-placement="left" title="🦀">
                 <img class="member__image" src="./src/m-kani.jpg" alt="🦀" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="デレック">
-                <img class="member__image" src="./src/m-deek.jpg" alt="デレック" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="はまだ">
-                <img class="member__image" src="./src/m-hamada.jpg" alt="はまだ" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="いけはた">
-                <img class="member__image" src="./src/m-ikehata.jpg" alt="いけはた" />
-                <span class="member__content">0 - 0</span>
+                <span class="member__content">2 - 1</span>
               </div>
               <div class="member" data-toggle="tooltip" data-placement="left" title="吉田">
                 <img class="member__image" src="./src/m-yoshida.jpg" alt="吉田" />
-                <span class="member__content">0 - 0</span>
+                <span class="member__content">2 - 1</span>
+              </div>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="デレック">
+                <img class="member__image" src="./src/m-deek.jpg" alt="デレック" />
+                <span class="member__content">2 - 0</span>
+              </div>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="駒田">
+                <img class="member__image" src="./src/m-komada.jpg" alt="駒田" />
+                <span class="member__content">2 - 0</span>
+              </div>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="藤野">
+                <img class="member__image" src="./src/m-fujino.jpg" alt="藤野" />
+                <span class="member__content">1 - 0</span>
+              </div>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="小黒">
+                <img class="member__image" src="./src/m-oguro.jpg" alt="小黒" />
+                <span class="member__content">1 - 0</span>
+              </div>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="研太">
+                <img class="member__image" src="./src/m-kenta.jpg" alt="研太" />
+                <span class="member__content">1 - 0</span>
+              </div>
+            </td>
+            <td>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="はまだ">
+                <img class="member__image" src="./src/m-hamada.jpg" alt="はまだ" />
+                <span class="member__content">1 - 1</span>
               </div>
               <div class="member" data-toggle="tooltip" data-placement="left" title="ゆき">
                 <img class="member__image" src="./src/m-yuki.jpg" alt="ゆき" />
-                <span class="member__content">0 - 0</span>
+                <span class="member__content">1 - 1</span>
               </div>
             </td>
-            <td></td>
+            <td>
+              <div class="member" data-toggle="tooltip" data-placement="left" title="いけはた">
+                <img class="member__image" src="./src/m-ikehata.jpg" alt="いけはた" />
+                <span class="member__content">1 - 2</span>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -249,17 +268,12 @@
   <div class="game">
     <div class="game__titleContainer">
       <h2>
+        <span class="game__count">No.2</span>
         <span class="game__date">18/6/15 Fri. 27:00</span>
         <span class="game__title">🇵🇹ポルトガル VS スペイン🇪🇸</span>
       </h2>
     </div>
     <div class="container">
-      <div class="game__google">
-        <a href="https://www.google.co.jp/search?q=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%AB%E3%83%83%E3%83%97#sie=m;/g/11f4qdw869;2;/m/030q7;dt;fp;1"
-           target="_blank"
-           class=""
-        ><i class="fab fa-google"></i> Google先生のお告げ</a>
-      </div>
       <table class="table game__table">
         <thead>
         <tr>
@@ -284,17 +298,41 @@
   <div class="game">
     <div class="game__titleContainer">
       <h2>
+        <span class="game__count">No.3</span>
         <span class="game__date">18/6/16 Sat. 22:00</span>
         <span class="game__title">🇦🇷アルゼンチン VS アイスランド🇮🇸</span>
       </h2>
     </div>
     <div class="container">
-      <div class="game__google">
-        <a href="https://www.google.co.jp/search?q=%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%82%AB%E3%83%83%E3%83%97#sie=m;/g/11f62zzsx3;2;/m/030q7;dt;fp;1"
-           target="_blank"
-           class=""
-        ><i class="fab fa-google"></i> Google先生のお告げ</a>
-      </div>
+      <table class="table game__table">
+        <thead>
+        <tr>
+          <th>アルゼンチン</th>
+          <th>引き分け</th>
+          <th>アイスランド</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="game">
+    <div class="game__titleContainer">
+      <h2>
+        <span class="game__count">No.4</span>
+        <span class="game__date">18/6/18 Mon. 21:00</span>
+        <span class="game__title">🇸🇪スウェーデン VS 韓国🇰🇷</span>
+      </h2>
+    </div>
+    <div class="container">
       <table class="table game__table">
         <thead>
         <tr>

@@ -92,6 +92,7 @@
   $baseColor: #F7C244;
 
   &__titleContainer {
+    position: relative;
     background-color: transparentize(desaturate($baseColor, 50%), 1 - 0.4);
     text-align: center;
     padding: 16px 0;
@@ -104,6 +105,20 @@
     &--done {
       background-color: #CCC;
     }
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    display: block;
+    left: 16px;
+    bottom: -24px;
+    font-size: 6rem;
+    font-weight: bold;
+    color: transparentize(#FFF, 1 - 0.3);
   }
 
   &__date {
