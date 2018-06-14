@@ -1,5 +1,9 @@
 $breakPoint: 420px;
 
+[v-cloak] {
+  display: none;
+}
+
 .jumbotron {
   display: flex;
   align-items: center;
@@ -65,6 +69,7 @@ $breakPoint: 420px;
   border-radius: 30px;
   padding-right: 6px;
   background-color: $memberColor;
+  margin: 2px;
 
   &__image {
     width: 30px;
@@ -82,6 +87,12 @@ $breakPoint: 420px;
       vertical-align: text-bottom;
     }
   }
+
+  &--win {
+    $winColor: #ED4242;
+    border-color: $winColor;
+    background-color: $winColor;
+  }
 }
 
 .memberList {
@@ -91,10 +102,6 @@ $breakPoint: 420px;
     font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 16px;
-  }
-
-  .member + .member {
-    margin-left: 4px;
   }
 }
 
@@ -113,7 +120,7 @@ $breakPoint: 420px;
     }
 
     &--done {
-      background-color: #CCC;
+      background-color: #AAA;
     }
 
     h2 {
@@ -125,7 +132,7 @@ $breakPoint: 420px;
     position: absolute;
     display: block;
     left: 16px;
-    bottom: -24px;
+    top: -32px;
     font-size: 6rem;
     font-weight: bold;
     color: transparentize(#FFF, 1 - 0.3);
@@ -154,6 +161,9 @@ $breakPoint: 420px;
     font-size: 1.6rem;
     font-weight: bold;
 
+    > span {
+      font-weight: normal;
+    }
     @media(max-width: $breakPoint) {
       font-size: 1.3rem;
     }
@@ -184,5 +194,9 @@ $breakPoint: 420px;
   &__tvInfo {
     text-align: right;
     font-size: 0.8rem;
+  }
+
+  &__member {
+    display: inline-block;
   }
 }
