@@ -36,499 +36,115 @@
     </div>
   </section>
   
-  <div class="container participant">
-    <h2 class="participant__title">参加者</h2>
-    <div class="member">
-      <img class="member__image" src="./src/m-watamura.jpg" alt="綿村" />
-      <span class="member__content">綿村 <span class="badge badge-dark">0kp</span></span>
+  <div class="container memberList" id="memberList">
+    <h2 class="memberList__title">参加者</h2>
+    <div class="member" v-for="member in members">
+      <img class="member__image" v-bind:src="member.image" v-bind:alt="member.name" />
+      <span class="member__content"  v-cloak>{{member.name}} <span class="badge badge-dark"  v-cloak>{{member.point}}kp</span></span>
     </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-fujino.jpg" alt="藤野" />
-      <span class="member__content">藤野 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-oguro.jpg" alt="小黒" />
-      <span class="member__content">小黒 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-mogi.jpg" alt="茂木" />
-      <span class="member__content">茂木 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-usami.jpg" alt="宇佐美" />
-      <span class="member__content">宇佐美 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-atsumi.jpg" alt="あつみん" />
-      <span class="member__content">あつみん <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-kenta.jpg" alt="研太" />
-      <span class="member__content">研太 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-yamako.jpg" alt="やまこ" />
-      <span class="member__content">やまこ <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-kani.jpg" alt="🦀" />
-      <span class="member__content">🦀 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-deek.jpg" alt="デレック" />
-      <span class="member__content">デレック <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-hamada.jpg" alt="はまだ" />
-      <span class="member__content">はまだ <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-ikehata.jpg" alt="いけはた" />
-      <span class="member__content">いけはた <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-yoshida.jpg" alt="吉田" />
-      <span class="member__content">吉田 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-komada.jpg" alt="駒田" />
-      <span class="member__content">駒田 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-yuki.jpg" alt="ゆき" />
-      <span class="member__content">ゆき <span class="badge badge-dark">0kp</span></span>
-    </div>
-
-    
-    <!-- member template
-
-              <div class="member" data-toggle="tooltip" data-placement="left" title="綿村">
-                <img class="member__image" src="./src/m-watamura.jpg" alt="綿村" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="藤野">
-                <img class="member__image" src="./src/m-fujino.jpg" alt="藤野" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="小黒">
-                <img class="member__image" src="./src/m-oguro.jpg" alt="小黒" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="茂木">
-                <img class="member__image" src="./src/m-mogi.jpg" alt="茂木" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="宇佐美">
-                <img class="member__image" src="./src/m-usami.jpg" alt="宇佐美" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="あつみん">
-                <img class="member__image" src="./src/m-atsumi.jpg" alt="あつみん" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="研太">
-                <img class="member__image" src="./src/m-kenta.jpg" alt="研太" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="やまこ">
-                <img class="member__image" src="./src/m-yamako.jpg" alt="やまこ" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="🦀">
-                <img class="member__image" src="./src/m-kani.jpg" alt="🦀" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="デレック">
-                <img class="member__image" src="./src/m-deek.jpg" alt="デレック" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="はまだ">
-                <img class="member__image" src="./src/m-hamada.jpg" alt="はまだ" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="いけはた">
-                <img class="member__image" src="./src/m-ikehata.jpg" alt="いけはた" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="吉田">
-                <img class="member__image" src="./src/m-yoshida.jpg" alt="吉田" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="駒田">
-                <img class="member__image" src="./src/m-komada.jpg" alt="駒田" />
-                <span class="member__content">0 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="ゆき">
-                <img class="member__image" src="./src/m-yuki.jpg" alt="ゆき" />
-                <span class="member__content">0 - 0</span>
-              </div>
-
-    -->
-    
   </div>
-  <div class="game">
-    <div class="game__titleContainer game__titleContainer--next">
-      <h2>
-        <span class="game__count">No.1</span>
-        <span class="game__date">6/14 Thu. 24:00</span>
-        <span class="game__title">🇷🇺ロシア VS サウジアラビア🇸🇦</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> NHK／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th colspan="3">ピタリ賞 <span class="game__point">7500kp</span></th>
-        </tr>
-        <tr>
-          <th>ロシア<br /><span class="game__point">312kp</span></th>
-          <th>引き分け<br /><span class="game__point">1875kp</span></th>
-          <th>サウジアラビア<br /><span class="game__point">3750kp</span></th>
-        </tr>
-        </thead>
-        <tbody>
+  
+  <div id="gameList">
+    <div class="game" v-for="game in games">
+      <div class="game__titleContainer"
+           v-bind:class="{ 'game__titleContainer--done': game.status == 'done',
+                           'game__titleContainer--next': game.status == 'next' }"
+      >
+        <h2>
+          <span class="game__count" v-cloak>No.{{game.id}}</span>
+          <span class="game__date" v-cloak>{{game.date}}</span>
+          <span class="game__title"  v-cloak>
+            {{game.teamAFlag}} {{game.teamA}}
+            <span>vs</span>
+            {{game.teamB}} {{game.teamBFlag}}
+          </span>
+          <div class="game__result" v-if="game.teamAResult && game.teamBResult"  v-cloak>
+            {{game.teamAResult}} - {{game.teamBResult}}
+          </div>
+        </h2>
+      </div>
+      <div class="container">
+        <div class="game__tvInfo"  v-cloak><i class="fal fa-tv-retro"></i> {{game.tv}}</div>
+        <table class="table game__table">
+          <thead>
+          <tr>
+            <th colspan="3">ピタリ賞 <span class="game__point"  v-cloak>{{game.point.pitari}}kp</span></th>
+          </tr>
+          <tr>
+            <th  v-cloak>{{game.teamA}}<br /><span class="game__point">{{game.point.teamA}}kp</span></th>
+            <th  v-cloak>引き分け<br /><span class="game__point">{{game.point.draw}}kp</span></th>
+            <th  v-cloak>{{game.teamB}}<br /><span class="game__point">{{game.point.teamB}}kp</span></th>
+          </tr>
+          </thead>
+          <tbody>
           <tr>
             <td>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="綿村">
-                <img class="member__image" src="./src/m-watamura.jpg" alt="綿村" />
-                <span class="member__content">3 - 1</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="宇佐美">
-                <img class="member__image" src="./src/m-usami.jpg" alt="宇佐美" />
-                <span class="member__content">3 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="茂木">
-                <img class="member__image" src="./src/m-mogi.jpg" alt="茂木" />
-                <span class="member__content">2 - 1</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="あつみん">
-                <img class="member__image" src="./src/m-atsumi.jpg" alt="あつみん" />
-                <span class="member__content">2 - 1</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="やまこ">
-                <img class="member__image" src="./src/m-yamako.jpg" alt="やまこ" />
-                <span class="member__content">2 - 1</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="🦀">
-                <img class="member__image" src="./src/m-kani.jpg" alt="🦀" />
-                <span class="member__content">2 - 1</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="吉田">
-                <img class="member__image" src="./src/m-yoshida.jpg" alt="吉田" />
-                <span class="member__content">2 - 1</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="デレック">
-                <img class="member__image" src="./src/m-deek.jpg" alt="デレック" />
-                <span class="member__content">2 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="駒田">
-                <img class="member__image" src="./src/m-komada.jpg" alt="駒田" />
-                <span class="member__content">2 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="藤野">
-                <img class="member__image" src="./src/m-fujino.jpg" alt="藤野" />
-                <span class="member__content">1 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="小黒">
-                <img class="member__image" src="./src/m-oguro.jpg" alt="小黒" />
-                <span class="member__content">1 - 0</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="研太">
-                <img class="member__image" src="./src/m-kenta.jpg" alt="研太" />
-                <span class="member__content">1 - 0</span>
+              <div v-for="vote in game.votes"
+                  class="game__member"
+              >
+                <div v-if="vote.teamA > vote.teamB"
+                     class="member"
+                     v-cloak
+                     v-bind:title="vote.member.name"
+                     data-toggle="tooltip" data-placement="left"
+                     v-bind:class="{ 'member--win': vote.teamA == game.teamAResult && vote.teamB == game.teamBResult }"
+                >
+                  <img class="member__image"
+                       v-cloak
+                       v-bind:src="vote.member.image"
+                       v-bind:alt="vote.member.name" />
+                  <span class="member__content"  v-cloak>
+                    {{vote.teamA}} - {{vote.teamB}}
+                  </span>
+                </div>
               </div>
             </td>
             <td>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="はまだ">
-                <img class="member__image" src="./src/m-hamada.jpg" alt="はまだ" />
-                <span class="member__content">1 - 1</span>
-              </div>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="ゆき">
-                <img class="member__image" src="./src/m-yuki.jpg" alt="ゆき" />
-                <span class="member__content">1 - 1</span>
+              <div v-for="vote in game.votes"
+                   class="game__member"
+              >
+                <div v-if="vote.teamA == vote.teamB"
+                     class="member"
+                     v-cloak
+                     v-bind:title="vote.member.name"
+                     data-toggle="tooltip" data-placement="left"
+                     v-bind:class="{ 'member--win': vote.teamA == game.teamAResult && vote.teamB == game.teamBResult }"
+                >
+                  <img class="member__image"
+                       v-cloak
+                       v-bind:src="vote.member.image"
+                       v-bind:alt="vote.member.name" />
+                  <span class="member__content"  v-cloak>
+                    {{vote.teamA}} - {{vote.teamB}}
+                  </span>
+                </div>
               </div>
             </td>
             <td>
-              <div class="member" data-toggle="tooltip" data-placement="left" title="いけはた">
-                <img class="member__image" src="./src/m-ikehata.jpg" alt="いけはた" />
-                <span class="member__content">1 - 2</span>
+              <div v-for="vote in game.votes"
+                   class="game__member"
+              >
+                <div v-if="vote.teamA < vote.teamB"
+                     class="member"
+                     v-cloak
+                     v-bind:title="vote.member.name"
+                     data-toggle="tooltip" data-placement="left"
+                     v-bind:class="{ 'member--win': vote.teamA == game.teamAResult && vote.teamB == game.teamBResult }"
+                >
+                  <img class="member__image"
+                       v-cloak
+                       v-bind:src="vote.member.image"
+                       v-bind:alt="vote.member.name" />
+                  <span class="member__content"  v-cloak>
+                    {{vote.teamA}} - {{vote.teamB}}
+                  </span>
+                </div>
               </div>
             </td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.2</span>
-        <span class="game__date">6/15 Fri. 27:00</span>
-        <span class="game__title">🇵🇹ポルトガル VS スペイン🇪🇸</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> NHK／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>ポルトガル</th>
-          <th>引き分け</th>
-          <th>スペイン</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.3</span>
-        <span class="game__date">6/16 Sat. 22:00</span>
-        <span class="game__title">🇦🇷アルゼンチン VS アイスランド🇮🇸</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> NHK／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>アルゼンチン</th>
-          <th>引き分け</th>
-          <th>アイスランド</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.4</span>
-        <span class="game__date">6/18 Mon. 21:00</span>
-        <span class="game__title">🇸🇪スウェーデン VS 韓国🇰🇷</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> NHK／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>スウェーデン</th>
-          <th>引き分け</th>
-          <th>韓国</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.5</span>
-        <span class="game__date">6/19 Tue. 21:00</span>
-        <span class="game__title">🇨🇴コロンビア VS 日本🇯🇵</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> NHK／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>コロンビア</th>
-          <th>引き分け</th>
-          <th>日本</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.6</span>
-        <span class="game__date">6/20 Wed. 21:00</span>
-        <span class="game__title">🇵🇹ポルトガル VS モロッコ🇲🇦</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> テレビ朝日系列／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>ポルトガル</th>
-          <th>引き分け</th>
-          <th>モロッコ</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.7</span>
-        <span class="game__date">6/22 Fri. 21:00</span>
-        <span class="game__title">🇧🇷ブラジル VS コスタリカ🇨🇷</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> テレビ朝日系列／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>ブラジル</th>
-          <th>引き分け</th>
-          <th>コスタリカ</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.8</span>
-        <span class="game__date">6/24 Sun. 24:00</span>
-        <span class="game__title">🇯🇵日本 VS セネガル🇸🇳</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> 日本テレビ系列／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>日本</th>
-          <th>引き分け</th>
-          <th>セネガル</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.9</span>
-        <span class="game__date">6/26 Tue. 23:00</span>
-        <span class="game__title">🇩🇰デンマーク VS フランス🇫🇷</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> テレビ朝日系列／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>デンマーク</th>
-          <th>引き分け</th>
-          <th>フランス</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="game">
-    <div class="game__titleContainer">
-      <h2>
-        <span class="game__count">No.10</span>
-        <span class="game__date">6/28 Thu. 23:00</span>
-        <span class="game__title">🇯🇵日本 VS ポーランド🇵🇱</span>
-      </h2>
-    </div>
-    <div class="container">
-      <div class="game__tvInfo"><i class="fal fa-tv-retro"></i> フジテレビ系列／NHK BS1</div>
-      <table class="table game__table">
-        <thead>
-        <tr>
-          <th>日本</th>
-          <th>引き分け</th>
-          <th>ポーランド</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>
-          </td>
-          <td>
-          </td>
-          <td></td>
-        </tr>
-        </tbody>
-      </table>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </main>
@@ -545,5 +161,8 @@
     $('[data-toggle="tooltip"]').tooltip()
   })
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>
