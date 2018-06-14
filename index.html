@@ -36,69 +36,13 @@
     </div>
   </section>
   
-  <div class="container participant">
-    <h2 class="participant__title">参加者</h2>
-    <div class="member">
-      <img class="member__image" src="./src/m-watamura.jpg" alt="綿村" />
-      <span class="member__content">綿村 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-fujino.jpg" alt="藤野" />
-      <span class="member__content">藤野 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-oguro.jpg" alt="小黒" />
-      <span class="member__content">小黒 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-mogi.jpg" alt="茂木" />
-      <span class="member__content">茂木 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-usami.jpg" alt="宇佐美" />
-      <span class="member__content">宇佐美 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-atsumi.jpg" alt="あつみん" />
-      <span class="member__content">あつみん <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-kenta.jpg" alt="研太" />
-      <span class="member__content">研太 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-yamako.jpg" alt="やまこ" />
-      <span class="member__content">やまこ <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-kani.jpg" alt="🦀" />
-      <span class="member__content">🦀 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-deek.jpg" alt="デレック" />
-      <span class="member__content">デレック <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-hamada.jpg" alt="はまだ" />
-      <span class="member__content">はまだ <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-ikehata.jpg" alt="いけはた" />
-      <span class="member__content">いけはた <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-yoshida.jpg" alt="吉田" />
-      <span class="member__content">吉田 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-komada.jpg" alt="駒田" />
-      <span class="member__content">駒田 <span class="badge badge-dark">0kp</span></span>
-    </div>
-    <div class="member">
-      <img class="member__image" src="./src/m-yuki.jpg" alt="ゆき" />
-      <span class="member__content">ゆき <span class="badge badge-dark">0kp</span></span>
-    </div>
+  <div class="container memberList" id="memberList">
+    <h2 class="memberList__title">参加者</h2>
 
+    <div class="member" v-for="member in members">
+      <img class="member__image" v-bind:src="member.image" v-bind:alt="member.name" />
+      <span class="member__content">{{member.name}} <span class="badge badge-dark">{{member.point}}kp</span></span>
+    </div>
     
     <!-- member template
 
@@ -545,5 +489,8 @@
     $('[data-toggle="tooltip"]').tooltip()
   })
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>
