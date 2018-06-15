@@ -180,6 +180,7 @@
 
         // var json_url = "https://script.googleusercontent.com/macros/echo?t="+Date.now()+"&user_content_key=JFpU94Aj8zaTrd3tQ1ChvSuiOMW81kbTwKMAhcI8GM1kRCjcl4sHPXOnBL51NpyVgzWpPhrxb681US6PBPFKg79_s2xAs239m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnDs_LozmrYOTwb1AWfGozGPKQzVXVfZ1ctcR3P1QubDvcV37AQ9Vuq-DpTorbRHNKUWcqGOZRlIJ&lib=M-QkCLeDQ7umt9-y336GCLOjFLE48JUL3";
         var json_url = "https://script.google.com/macros/s/AKfycbxtgFhycCh7Zs3dAaBxfOpw_RpvODRuUj77O3jgkoAGrZ3WDuFt/exec";
+        var json_url = "https://script.google.com/macros/s/AKfycbxtgFhycCh7Zs3dAaBxfOpw_RpvODRuUj77O3jgkoAGrZ3WDuFt/exec";
         $.ajax({
             type: "GET",
             url:  json_url,
@@ -189,7 +190,7 @@
                 var voteInfoOne = [];
                 $.each(returnData,
                     function(i,val){
-                        if(val.game<=2){
+                        if(val.game){
                             var englishName = val.nameEn;
                             if(englishName && members[englishName]) {
                                 var tmp = {member: members[englishName], teamA: val["teamA"], teamB: val["teamB"]};
