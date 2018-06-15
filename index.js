@@ -70,16 +70,15 @@ var members = {
     point: 0
   },
   yuki : {
-    name:'ゆき.',
+    name:'ゆき',
     image: './src/m-yuki.jpg',
     point:0
   },
-    nishida : {
-        name:'にしだ',
-        image: './src/m-nishida.jpg',
-        point:0
-    }
-
+  nishida : {
+    name:'にしだ',
+    image: './src/m-nishida.jpg',
+    point:0
+  }
 };
 
 var pointInfo =  {
