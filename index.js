@@ -145,23 +145,7 @@ var pointInfo =  {
 }
 
 var voteInfo = {
-  game1: [
-    {member: members.watamura, teamA: 3, teamB: 1},
-    {member: members.usami, teamA: 3, teamB: 0},
-    {member: members.mogi, teamA: 2, teamB: 1},
-    {member: members.yamako, teamA: 2, teamB: 1},
-    {member: members.atsumi, teamA: 2, teamB: 1},
-    {member: members.kani, teamA: 2, teamB: 1},
-    {member: members.yoshida, teamA: 2, teamB: 1},
-    {member: members.deek, teamA: 2, teamB: 0},
-    {member: members.komada, teamA: 2, teamB: 0},
-    {member: members.fujino, teamA: 1, teamB: 0},
-    {member: members.oguro, teamA: 1, teamB: 0},
-    {member: members.kenta, teamA: 1, teamB: 0},
-    {member: members.hamada, teamA: 1, teamB: 1},
-    {member: members.ikehata, teamA: 1, teamB: 2},
-    {member: members.yuki, teamA: 1, teamB: 1}
-  ],
+  game1: [],
   game2: [],
   game3: [],
   game4: [],
@@ -326,5 +310,6 @@ var vueGame = new Vue({
   el: '#gameList',
   data: {games: games}
 });
+
 
 
