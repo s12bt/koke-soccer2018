@@ -2,52 +2,52 @@ var members = {
   watamura: {
     name: '綿村',
     image: './src/m-watamura.jpg',
-    point: 312
+    point: 0
   },
   fujino : {
     name: '藤野',
     image: './src/m-fujino.jpg',
-    point: 312
+    point: 0
   },
   oguro: {
     name: '小黒',
     image: './src/m-oguro.jpg',
-    point: 312
+    point: 0
   },
   mogi :{
     name: '茂木',
     image: './src/m-mogi.jpg',
-    point: 312
+    point: 0
   },
   usami: {
     name: '宇佐美',
     image: './src/m-usami.jpg',
-    point: 312
+    point: 0
   },
   atsumi: {
     name: 'あつみん',
     image: './src/m-atsumi.jpg',
-    point: 312
+    point: 0
   },
   kenta : {
     name: '研太',
     image: './src/m-kenta.jpg',
-    point: 312
+    point: 0
   },
   yamako : {
     name: 'やまこ',
     image: './src/m-yamako.jpg',
-    point: 312
+    point: 0
   },
   kani: {
     name: '🦀',
     image: './src/m-kani.jpg',
-    point: 312
+    point: 0
   },
   deek: {
     name: 'デレック',
     image: './src/m-deek.jpg',
-    point: 312
+    point: 0
   },
   hamada: {
     name: 'はまだ',
@@ -62,16 +62,21 @@ var members = {
   yoshida: {
     name: '吉田',
     image: './src/m-yoshida.jpg',
-    point: 312
+    point: 0
   },
   komada :{
     name: '駒田',
     image: './src/m-komada.jpg',
-    point: 312
+    point: 0
   },
   yuki : {
     name:'ゆき',
     image: './src/m-yuki.jpg',
+    point:0
+  },
+  nishida : {
+    name:'にしだ',
+    image: './src/m-nishida.jpg',
     point:0
   }
 };
@@ -321,3 +326,5 @@ var vueGame = new Vue({
   el: '#gameList',
   data: {games: games}
 });
+
+
