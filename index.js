@@ -95,10 +95,10 @@ var pointInfo =  {
     teamB : 734
   },
   game3 : {
-    pitari: null,
-    teamA : null,
-    draw  : null,
-    teamB : null
+    pitari: 8000,
+    teamA : 333,
+    draw  : 1333,
+    teamB : 4000
   },
   game4 : {
     pitari: null,
