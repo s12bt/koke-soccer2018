@@ -203,7 +203,7 @@ var games = [
   },
   {
     id: 4,
-    status: 'next',
+    status: 'done',
     date: '6/18 Mon. 21:00',
     teamA: 'スウェーデン',
     teamAFlag: '🇸🇪',
@@ -217,7 +217,7 @@ var games = [
   },
   {
     id: 5,
-    status: 'notyet',
+    status: 'next',
     date: '6/19 Tue. 21:00',
     teamA: 'コロンビア',
     teamAFlag: '🇨🇴',
