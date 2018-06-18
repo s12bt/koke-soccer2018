@@ -184,10 +184,10 @@
 <script type="text/javascript">
     $(function(){
 
-        var json_url = "https://script.google.com/macros/s/AKfycbxtgFhycCh7Zs3dAaBxfOpw_RpvODRuUj77O3jgkoAGrZ3WDuFt/exec";
+        var vote_info_url = "https://script.google.com/macros/s/AKfycbxtgFhycCh7Zs3dAaBxfOpw_RpvODRuUj77O3jgkoAGrZ3WDuFt/exec";
         $.ajax({
             type: "GET",
-            url:  json_url,
+            url:  vote_info_url,
             dataType: "json",
             success: function (returnData) {
                 var voteInfoOne = [];
@@ -199,6 +199,22 @@
                                 var tmp = {member: members[englishName], teamA: val["teamA"], teamB: val["teamB"]};
                                 var gameName = "game" + val.game;
                                 voteInfo[gameName].push(tmp);
+                                var voteTypeName;
+                                if(val["teamA"]>val["teamB"]){
+                                    voteTypeName = "teamA";
+                                }else if(val["teamA"]<val["teamB"]){
+                                    voteTypeName = "teamB";
+                                }else{
+                                    voteTypeName = "draw";
+                                }
+                                var voteTypeCountName = voteTypeName+"_count";
+                                if(pointInfo[gameName][voteTypeCountName]==null){
+                                    pointInfo[gameName][voteTypeCountName]=0;
+                                }
+                                pointInfo[gameName][voteTypeCountName]=pointInfo[gameName][voteTypeCountName] + 1;
+
+
+
                                 if(val["amount"]){
                                     members[englishName]["point"] =  members[englishName]["point"]  + val.amount;
                                 }
@@ -208,9 +224,41 @@
                         }
                     }
                 );
+                console.log(pointInfo);
+                var game_info_url = "https://script.google.com/macros/s/AKfycby-UbbqXYRvqStL7CTLlb1t6Ep60BxOMlm0E3wXxXfwh3cjHDQ/exec";
+                $.ajax({
+                    type: "GET",
+                    url:  game_info_url,
+                    dataType: "json",
+                    success: function (returnData) {
+                        $.each(returnData,
+                            function(i,val){
+                                if(val.game_number){
+                                    var gameName = "game" + val.game_number;
+                                    var allAmount = val.carry_over+val.sum_ammount;
+                                    if(pointInfo[gameName]["teamA_count"]){
+                                        pointInfo[gameName]["teamA"]=parseInt(allAmount/pointInfo[gameName]["teamA_count"]/2);
+                                    }
+                                    if(pointInfo[gameName]["teamB_count"]){
+                                        pointInfo[gameName]["teamB"]=parseInt(allAmount/pointInfo[gameName]["teamB_count"]/2);
+                                    }
+                                    if(pointInfo[gameName]["draw_count"]){
+                                        pointInfo[gameName]["draw"]=parseInt(allAmount/pointInfo[gameName]["draw_count"]/2);
+                                    }
+                                    pointInfo[gameName]["pitari"]=allAmount;
+
+                                }
+                            }
+                        );
+                    }
+
+                });
             }
 
         });
+
+
+
 
     });
 
