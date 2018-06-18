@@ -83,22 +83,22 @@ var members = {
 
 var pointInfo =  {
   game1 : {
-    pitari: 7500,
-    teamA : 312,
-    draw  : 1875,
-    teamB : 3750
+    pitari: null,
+    teamA : null,
+    draw  : null,
+    teamB : null
   },
   game2 : {
-    pitari: 11756,
-    teamA : 2939,
-    draw  : 979,
-    teamB : 734
+    pitari: null,
+    teamA : null,
+    draw  : null,
+    teamB : null
   },
   game3 : {
-    pitari: 8000,
-    teamA : 333,
-    draw  : 1333,
-    teamB : 4000
+    pitari: null,
+    teamA : null,
+    draw  : null,
+    teamB : null
   },
   game4 : {
     pitari: null,
