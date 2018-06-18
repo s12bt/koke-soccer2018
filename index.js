@@ -210,8 +210,8 @@ var games = [
     teamB: '韓国',
     teamBFlag: '🇰🇷',
     tv: 'NHK／NHK BS1',
-    teamAResult: null,
-    teamBResult: null,
+    teamAResult: 1,
+    teamBResult: 0,
     point : pointInfo.game4,
     votes: voteInfo.game4
   },
