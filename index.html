@@ -256,6 +256,22 @@
                                 }
                             }
                         );
+                        var lastValueIsDone = false;
+                        for(var i=1;i<=10;i++){
+                            var gameName = "game" + i;
+                            if(games[gameName]["teamAResult"]!==null){
+                                 lastValueIsDone = true;
+                                games[gameName]["status"]="done";
+                            }else{
+                                if(lastValueIsDone){
+                                    games[gameName]["status"]="next";
+                                }else{
+                                    games[gameName]["status"]="notyet";
+                                }
+                                lastValueIsDone = false;
+                            }
+
+                        }
                     }
 
                 });

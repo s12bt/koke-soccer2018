@@ -161,7 +161,7 @@ var voteInfo = {
 var games = {
   game1: {
     id: 1,
-    status: 'done',
+    status: '',
     date: '6/14 Thu. 24:00',
     teamA: 'ロシア',
     teamAFlag: '🇷🇺',
@@ -175,7 +175,7 @@ var games = {
   },
   game2:{
     id: 2,
-    status: 'done',
+    status: '',
     date: '6/15 Fri. 27:00',
     teamA: 'ポルトガル',
     teamAFlag: '🇵🇹',
@@ -189,7 +189,7 @@ var games = {
   },
   game3:{
     id: 3,
-    status: 'done',
+    status: '',
     date: '6/16 Sat. 22:00',
     teamA: 'アルゼンチン',
     teamAFlag: '🇦🇷',
@@ -203,7 +203,7 @@ var games = {
   },
   game4:{
     id: 4,
-    status: 'done',
+    status: '',
     date: '6/18 Mon. 21:00',
     teamA: 'スウェーデン',
     teamAFlag: '🇸🇪',
@@ -217,7 +217,7 @@ var games = {
   },
   game5:{
     id: 5,
-    status: 'next',
+    status: '',
     date: '6/19 Tue. 21:00',
     teamA: 'コロンビア',
     teamAFlag: '🇨🇴',
@@ -231,7 +231,7 @@ var games = {
   },
   game6:{
     id: 6,
-    status: 'notyet',
+    status: '',
     date: '6/20 Wed. 21:00',
     teamA: 'ポルトガル',
     teamAFlag: '🇵🇹',
