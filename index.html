@@ -247,12 +247,21 @@
                                     }
                                     pointInfo[gameName]["pitari"]=allAmount;
 
+                                    if(val.teamA!==""){
+                                      games[gameName]["teamAResult"]=val.teamA;
+                                    }
+                                    if(val.teamB!=="") {
+                                        games[gameName]["teamBResult"] = val.teamB;
+                                    }
                                 }
                             }
-                        );
+                        ); console.log(games);
                     }
 
                 });
+
+                console.log(pointInfo);
+
             }
 
         });

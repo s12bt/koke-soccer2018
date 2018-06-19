@@ -158,8 +158,8 @@ var voteInfo = {
 }
 
 
-var games = [
-  {
+var games = {
+  game1: {
     id: 1,
     status: 'done',
     date: '6/14 Thu. 24:00',
@@ -173,7 +173,7 @@ var games = [
     point: pointInfo.game1,
     votes: voteInfo.game1
   },
-  {
+  game2:{
     id: 2,
     status: 'done',
     date: '6/15 Fri. 27:00',
@@ -187,7 +187,7 @@ var games = [
     point : pointInfo.game2,
     votes: voteInfo.game2
   },
-  {
+  game3:{
     id: 3,
     status: 'done',
     date: '6/16 Sat. 22:00',
@@ -201,7 +201,7 @@ var games = [
     point : pointInfo.game3,
     votes: voteInfo.game3
   },
-  {
+  game4:{
     id: 4,
     status: 'done',
     date: '6/18 Mon. 21:00',
@@ -210,12 +210,12 @@ var games = [
     teamB: '韓国',
     teamBFlag: '🇰🇷',
     tv: 'NHK／NHK BS1',
-    teamAResult: 1,
-    teamBResult: 0,
+    teamAResult: null,
+    teamBResult: null,
     point : pointInfo.game4,
     votes: voteInfo.game4
   },
-  {
+  game5:{
     id: 5,
     status: 'next',
     date: '6/19 Tue. 21:00',
@@ -229,7 +229,7 @@ var games = [
     point : pointInfo.game5,
     votes: voteInfo.game5
   },
-  {
+  game6:{
     id: 6,
     status: 'notyet',
     date: '6/20 Wed. 21:00',
@@ -243,7 +243,7 @@ var games = [
     point : pointInfo.game6,
     votes: voteInfo.game6
   },
-  {
+  game7:{
     id: 7,
     status: 'notyet',
     date: '6/22 Fri. 21:00',
@@ -257,7 +257,7 @@ var games = [
     point : pointInfo.game7,
     votes: voteInfo.game7
   },
-  {
+  game8:{
     id: 8,
     status: 'notyet',
     date: '6/24 Sun. 24:00',
@@ -271,7 +271,7 @@ var games = [
     point : pointInfo.game8,
     votes: voteInfo.game8
   },
-  {
+  game9:{
     id: 9,
     status: 'notyet',
     date: '6/26 Tue. 23:00',
@@ -285,7 +285,7 @@ var games = [
     point : pointInfo.game9,
     votes: voteInfo.game9
   },
-  {
+  game10:{
     id: 10,
     status: 'notyet',
     date: '6/28 Thu. 23:00',
@@ -299,7 +299,7 @@ var games = [
     point : pointInfo.game10,
     votes: voteInfo.game10
   }
-];
+};
 
 var vueMember = new Vue({
   el: '#memberList',
