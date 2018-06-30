@@ -137,12 +137,18 @@ var pointInfo =  {
     teamB : null
   },
   game10 : {
-    pitari: null,
-    teamA : null,
-    draw  : null,
-    teamB : null
+        pitari: null,
+        teamA : null,
+        draw  : null,
+        teamB : null
+  },
+  game11 : {
+        pitari: null,
+        teamA : null,
+        draw  : null,
+        teamB : null
   }
-}
+};
 
 var voteInfo = {
   game1: [],
@@ -154,7 +160,8 @@ var voteInfo = {
   game7: [],
   game8: [],
   game9: [],
-  game10: []
+  game10: [],
+  game11: []
 }
 
 
@@ -298,7 +305,22 @@ var games = {
     teamBResult: null,
     point : pointInfo.game10,
     votes: voteInfo.game10
-  }
+  },
+  game11:{
+        id: 11,
+        status: 'notyet',
+        date: '6/30 Sat. 23:00',
+        teamA: 'フランス',
+        teamAFlag: '🇯🇵',
+        teamB: 'アルゼンチン',
+        teamBFlag: '🇵🇱',
+        tv: ' ',
+        teamAResult: null,
+        teamBResult: null,
+        point : pointInfo.game11,
+        votes: voteInfo.game11
+    }
+
 };
 
 var vueMember = new Vue({
