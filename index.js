@@ -143,10 +143,28 @@ var pointInfo =  {
         teamB : null
   },
   game11 : {
-        pitari: null,
-        teamA : null,
-        draw  : null,
-        teamB : null
+      pitari: null,
+      teamA : null,
+      draw  : null,
+      teamB : null
+  },
+  game12  : {
+      pitari: null,
+      teamA : null,
+      draw  : null,
+      teamB : null
+  },
+  game13 : {
+      pitari: null,
+      teamA : null,
+      draw  : null,
+      teamB : null
+  },
+  game14 : {
+      pitari: null,
+      teamA : null,
+      draw  : null,
+      teamB : null
   }
 };
 
@@ -161,8 +179,11 @@ var voteInfo = {
   game8: [],
   game9: [],
   game10: [],
-  game11: []
-}
+  game11: [],
+  game12: [],
+  game13: [],
+  game14: []
+};
 
 
 var games = {
@@ -306,7 +327,7 @@ var games = {
     point : pointInfo.game10,
     votes: voteInfo.game10
   },
-  game11:{
+    game11:{
         id: 11,
         status: 'notyet',
         date: '6/30 Sat. 23:00',
@@ -319,8 +340,49 @@ var games = {
         teamBResult: null,
         point : pointInfo.game11,
         votes: voteInfo.game11
+    },
+    game12:{
+        id: 12,
+        status: 'notyet',
+        date: '7/1 Sun. 23:00',
+        teamA: 'スペイン',
+        teamAFlag: '🇯🇵',
+        teamB: 'ロシア',
+        teamBFlag: '🇵🇱',
+        tv: ' ',
+        teamAResult: null,
+        teamBResult: null,
+        point : pointInfo.game12,
+        votes: voteInfo.game12
+    },
+    game13:{
+        id: 13,
+        status: 'notyet',
+        date: '7/2 Mon. 27:00',
+        teamA: 'ベルギー',
+        teamAFlag: '🇯🇵',
+        teamB: '日本',
+        teamBFlag: '🇵🇱',
+        tv: ' ',
+        teamAResult: null,
+        teamBResult: null,
+        point : pointInfo.game13,
+        votes: voteInfo.game13
+    },
+    game14:{
+        id: 14,
+        status: 'notyet',
+        date: '7/3 Sat. 23:00',
+        teamA: 'スウェーデン',
+        teamAFlag: '🇯🇵',
+        teamB: 'スイス',
+        teamBFlag: '🇵🇱',
+        tv: ' ',
+        teamAResult: null,
+        teamBResult: null,
+        point : pointInfo.game14,
+        votes: voteInfo.game14
     }
-
 };
 
 var vueMember = new Vue({
