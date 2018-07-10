@@ -165,7 +165,7 @@ var pointInfo =  {
         teamA : null,
         draw  : null,
         teamB : null
-    }
+    },
     game15 : {
         pitari: null,
         teamA : null,
