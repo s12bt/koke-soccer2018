@@ -165,7 +165,7 @@ var pointInfo =  {
         teamA : null,
         draw  : null,
         teamB : null
-    },
+    }
     game15 : {
         pitari: null,
         teamA : null,
@@ -457,9 +457,9 @@ var games = {
         id: 17,
         status: 'notyet',
         date: '7/3 Sat. 23:00',
-        teamA: 'xx',
+        teamA: 'フランス',
         teamAFlag: '🇯🇵',
-        teamB: 'xx',
+        teamB: 'ベルギー',
         teamBFlag: '🇵🇱',
         tv: ' ',
         teamAResult: null,
@@ -471,9 +471,9 @@ var games = {
         id: 18,
         status: 'notyet',
         date: '7/3 Sat. 23:00',
-        teamA: 'xx',
+        teamA: 'クロアチア',
         teamAFlag: '🇯🇵',
-        teamB: 'xx',
+        teamB: 'イングランド',
         teamBFlag: '🇵🇱',
         tv: ' ',
         teamAResult: null,
